@@ -4,7 +4,7 @@
 // Spring 2017, MTIID
 
 OscOut out;
-("chuckServer.local", 50000) => out.dest;
+("localhost", 50000) => out.dest;
 
 fun void rtronSend(int note, int vel){
     out.start("/rattletron");

@@ -1,5 +1,5 @@
 OscOut out;
-("chuckServer.local", 50000) => out.dest;
+("localhost", 50000) => out.dest;
 
 fun void snapperPlay(int note, int vel){
     out.start("/snapperbots");

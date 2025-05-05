@@ -53,6 +53,13 @@ public class Handshake {
     // pings the Arduinos and returns their 'arduinoID'
     fun void handshake() {
         [255, 255, 255] @=> int ping[];
+
+        // NOTE: getByte() can hang infinitely
+        // this is an issue if a serial device appears 
+        // but isn't programmed to respond with a handshake
+
+        // need to add some type of timeout
+
         for (int i ; i < serial.cap(); i++) {
             serial[i].writeBytes(ping);
             serial[i].onByte() => now;

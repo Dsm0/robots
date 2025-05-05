@@ -1,5 +1,5 @@
 OscOut out;
-("chuckServer.local", 50000) => out.dest;
+("localhost", 50000) => out.dest;
 
 // Marimba MIDI notes
 [45, 47, 48, 50, 52, 53, 54, 55, 57, 59, 
@@ -31,16 +31,16 @@ fun void playAllNotes(int delayTime) {
     <<<"Playing all Marimbot notes">>>;
     for(0 => int i; i < mScl.size(); i++){
         i => int s;
-        marimbotPlay(mScl[s], 100, delayTime);    
+        marimbotPlay(mScl[s], 127, delayTime);    
     }
     for(mScl.size() -1 => int i; i > -1; i--){
         i => int s;
-        marimbotPlay(mScl[s], 100, delayTime);    
+        marimbotPlay(mScl[s], 127, delayTime);    
     }
 }
 
 while(1) {
     playAllNotes(160);
-    shakeShake(1000, 20);
-    3::second => now;
+    // shakeShake(1000, 20);
+    1::second => now;
 }

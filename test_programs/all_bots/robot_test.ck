@@ -1,5 +1,5 @@
 OscOut out;
-("chuckServer.local", 50000) => out.dest;
+("localhost", 50000) => out.dest;
 
 // Trimpspin MIDI notes
 [60,61,62,63,64,65,66,67,68,69,

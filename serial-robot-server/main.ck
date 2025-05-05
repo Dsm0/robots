@@ -5,10 +5,12 @@
 // give it some time to breathe
 HandshakeID talk;
 0.5::second => now;
+<<< "HandshakeID created" >>>;
 
 // initial handshake between ChucK and Arduinos
 talk.talk.init();
-1::second => now;
+// 1::second => now;
+<<< "HandshakeID initalized" >>>;
 <<<"-----------------">>>;
 <<< "Handshakes done" >>>;
 <<<"-----------------">>>;
@@ -18,8 +20,8 @@ Trimpbeat b;
 Trimpspin s;
 SnapperBot1 sb1;
 StringThing st;
-RattleTron r;
-Tammy t;
+// RattleTron r;
+// Tammy t;
 BlowBot bb;
 4::second => now;
 <<<"-----------------">>>;
